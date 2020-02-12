@@ -4,6 +4,7 @@ import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
+import { ToastService } from 'src/app/services/toast/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private _auth: AuthService,
-    private _error: ErrorInterceptor
+    private _error: ErrorInterceptor,
+    private _toast : ToastService
   ) {
     this.getCurrentUser();
     this.user ? router.navigate(['manage']) : this.createLoginForm();
@@ -101,6 +103,7 @@ export class LoginComponent implements OnInit {
     this.loader = true;
     this._auth.forgotPassword(email).then(p => {
       this.loader = false;
+      this._toast.success('Success','We have sent to you an email for reset your password');
     }).catch(err => {
       this.loader = false;
       this._error.handleError(err);
