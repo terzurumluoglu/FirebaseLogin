@@ -1,0 +1,79 @@
+body{
+  background: url("/assets/images/bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.helper{
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  float:right;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.box{
+  height: 90px;
+}
+.boxPassword{
+  height: 105px;
+}
+
+    .disabled{
+        cursor:not-allowed;
+    }
+
+  .invalidfeedback{
+      font-size: 12px;
+      padding: 3px 0px 0px 10px;
+      color: crimson;
+      font-style: italic;
+      float: right;
+  }
+
+  .valid-feedback{
+      display: block;
+    }
+    
+    .invalid-feedback{
+    display: block;
+}
+
+  /* Change Bootstrap */
+  .form-control.is-valid, .was-validated .form-control:valid {
+    border-color: #28a745;
+    padding-right: calc(1.5em + .75rem);
+    background-image: none !important;
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+  .form-control.is-invalid, .was-validated .form-control:invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: none !important;
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+.area{
+  background-color: #e9ecef;
+  height: 100%;
+  margin: 50px 50px 50px 50px;
+  padding: 30px 20px 30px 20px;
+  border-radius: 2%;
+}
+.jumbotron {
+  margin-bottom: 0 !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  padding-right: 2rem !important;
+  padding-left: 2rem !important;
+  } 
+/* Change Bootstrap */

@@ -1,1 +1,49 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-4 col-md-6 col-sm-9 area">
+            <div class="jumbotron">
+                <h2 class="display-4" style="text-align: center;">Login</h2>
+                <hr class="my-4">
+                <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+                    <div class="form-row row justify-content-end">
+                        <div class="col-lg-12 col-md-12 col-sm-12 box">
+                            <div class="row">
+                                <label for="email">Email </label>
+                                <input formControlName="email" type="text" class="form-control is-valid col-12"
+                                    id="email" value="Mark">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 boxPassword">
+                            <div class="row">
+                                <label for="password">Password</label>
+                                <input formControlName="password" type="password" class="form-control is-valid col-12"
+                                    id="password" value="Otto">
+                            </div>
+                            <div class="helper pointer" (click)="forgotPassword(loginForm.value.email)">
+                                Forgot password?
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <button class="btn btn-primary btn-block col-12" type="submit">
+                                    Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row social">
+                    <div [class]="s?.cssClass" (click)="loginWithSocial(s?.title)" *ngFor="let s of socialArr">
+                        <i [class]="s?.icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="loader">
+                <img *ngIf="loader" src="assets/images/loader.gif">
+            </div>
+            <hr>
+            <div class="row center">
+                <span class="margin-center">Don’t have an account? <a routerLink="/home/register">Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+</div>

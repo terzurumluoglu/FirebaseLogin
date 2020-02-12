@@ -6,9 +6,21 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ToastService {
 
-  constructor(private toastr: ToastrService) {}
- 
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
+  constructor(private toastr: ToastrService) { }
+
+  success(title: string, message: string) {
+    this.toastr.success(message, title);
+  }
+
+  info(title: string, message: string) {
+    this.toastr.info(message, title);
+  }
+
+  warning(title: string, message: string) {
+    this.toastr.warning(message, title);
+  }
+
+  danger(title: string, message: string) {
+    this.toastr.error(message, title);
   }
 }

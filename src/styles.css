@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.pointer{
+    cursor: pointer;
+}
+
+.loader{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,1 +1,55 @@
-<p>register works!</p>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-4 col-md-6 col-sm-9 area">
+            <div class="jumbotron">
+                <h2 class="display-4" style="text-align: center;">Register</h2>
+                <hr class="my-4">
+                <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+                    <div class="form-row row justify-content-end">
+                        <div class="col-lg-12 col-md-12 col-sm-12 box">
+                            <div class="row">
+                                <label for="email">Email <span
+                                        *ngIf="f.email.dirty && f.email.invalid"
+                                        class="invalidfeedback">E-mail required
+                                    </span></label>
+                                <input formControlName="email" type="text"
+                                [class]="!f.email.dirty ? 'form-control  col-12' :  (registerForm.controls.email.invalid ? 'form-control is-invalid col-12' : 'form-control is-valid col-12')"
+                                    id="email">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 box">
+                            <div class="row">
+                                <label for="password">Password <span
+                                        *ngIf="registerForm.controls.password.dirty && registerForm.controls.password.invalid"
+                                        class="invalidfeedback">Password required
+                                    </span></label>
+                                <input formControlName="password" type="password"
+                                [class]="!registerForm.controls.password.dirty ? 'form-control col-12' : (registerForm.controls.password.invalid || (registerForm.controls.passwordConfirm.dirty && registerForm.controls.passwordConfirm.invalid)) ? 'form-control is-invalid col-12' : 'form-control is-valid col-12'" id="password">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 box">
+                            <div class="row">
+                                <label for="passwordConfirm">Password Confirm <span
+                                        *ngIf="registerForm.controls.passwordConfirm.invalid && (registerForm.controls.passwordConfirm.dirty || registerForm.controls.passwordConfirm.value.length != 0)"
+                                        class="invalidfeedback">Passwords are not match
+                                    </span></label>
+                                <input formControlName="passwordConfirm" type="password"
+                                [class]="!registerForm.controls.passwordConfirm.dirty ? 'form-control col-12' : (registerForm.controls.passwordConfirm.invalid ? 'form-control is-invalid col-12' : 'form-control is-valid col-12')" id="passwordConfirm">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <button
+                                    [class]="registerForm.valid ? 'btn btn-primary btn-block col-12' : 'btn btn-primary btn-block col-12 disabled' "
+                                    type="submit">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="loader">
+                <img *ngIf="loader" src="assets/images/loader.gif">
+            </div>
+        </div>
+    </div>
+</div>
