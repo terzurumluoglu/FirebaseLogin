@@ -2,6 +2,17 @@ h5{
     text-align: center;
     line-height: 1.5em;
 }
+button{
+    margin-left: auto;
+    margin-right: auto;
+}
 .btn-center{
     text-align: center;
+}
+.manage{
+    background-color: #e9ecef;
+    height: 100%;
+    margin: 50px 50px 50px 50px;
+    padding: 30px 20px 30px 20px;
+    border-radius: 2%;
 }

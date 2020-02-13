@@ -1,9 +1,8 @@
 <div class="container">
     <div class="row justify-content-md-center">
-        <div class="col-lg-8 col-md-6 col-sm-9"
-            style="background-color: #e9ecef; height: 100%; margin: 50px 50px 50px 50px; padding: 30px 20px 30px 20px; border-radius: 2%;">
+        <div class="col-lg-8 col-md-6 col-sm-9 manage">
             <div class="jumbotron">
-                <h2 class="display-4" style="text-align: center;">welcome</h2>
+                <h2 class="display-4">welcome</h2>
                 <hr class="my-4">
 
                 <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" *ngIf="user">
@@ -12,8 +11,7 @@
                     </h5>
                     <hr>
                     <div class="btn-center">
-                        <button type="button" style="margin-left: auto; margin-right: auto;"
-                            class="btn btn-outline-danger" (click)="logout()">Log Out</button>
+                        <button type="button" class="btn btn-outline-danger" (click)="logout()">Log Out</button>
                     </div>
                 </div>
             </div>

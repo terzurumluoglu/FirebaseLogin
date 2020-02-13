@@ -3,7 +3,7 @@
         <div class="col-lg-4 col-md-6 col-sm-9 area">
             <div id="sign-in-button"></div>
             <div class="jumbotron" *ngIf="isPhone">
-                <h2 class="display-4" style="text-align: center;">Login with Phone</h2>
+                <h2 class="display-4">Login with Phone</h2>
                 <hr class="my-4">
                 <form [formGroup]="phoneForm" (ngSubmit)="login(phoneForm)">
                     <div class="form-row row justify-content-end">
@@ -25,7 +25,7 @@
                 </form>
             </div>
             <div class="jumbotron" *ngIf="isCode">
-                <h2 class="display-4" style="text-align: center;">Verify Code</h2>
+                <h2 class="display-4" >Verify Code</h2>
                 <hr class="my-4">
                 <form [formGroup]="codeForm" (ngSubmit)="verifyCode(codeForm)">
                     <div class="form-row row justify-content-end">
